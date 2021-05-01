@@ -1,0 +1,116 @@
+.search {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow-y: hidden;
+  background-color: var(--color-dark-blue-1);
+  border: 1px solid var(--color-white);
+
+  &__form-wrapper {
+    padding: 25px;
+    min-height: 90px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-white);
+
+    @include mobile {
+      min-height: 70px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    width: 80%;
+    max-width: 250px;
+    height: 40px;
+    padding: 5px 10px;
+    background: var(--color-white);
+    border: 1px solid #efd26e;
+    border-radius: 5px 0 0 5px;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--color-dark-blue-1);
+    box-sizing: border-box;
+
+    @include mobile {
+      height: 30px;
+      width: 60%;
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__btn-to-read-list {
+    display: none;
+
+    @include mobile {
+      display: block;
+      width: 70px;
+      height: 40px;
+      background: var(--color-white);
+      border: 1px solid var(--color-yellow);
+      border-radius: 5px;
+      color: var(--color-dark-blue-1);
+    }
+  }
+
+  .spinner {
+    align-self: center;
+  }
+
+  &__btn-submit {
+    width: 95px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+
+    @include mobile {
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      font-size: 10px;
+    }
+  }
+
+  &__footer {
+    padding: 10px 25px;
+    min-height: 80px;
+    border-top: 1px solid var(--color-white);
+
+    @include mobile {
+      min-height: 70px;
+    }
+  }
+
+  &__info {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 145%;
+    color: var(--color-white);
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__btns-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

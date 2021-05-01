@@ -1,0 +1,63 @@
+.book-card {
+  padding: 15px;
+  border-bottom: 1px solid var(--color-white);
+  box-sizing: border-box;
+  color: var(--color-white);
+
+  &.selected {
+    background-color: var(--color-white);
+    .book-card__title {
+      color: var(--color-yellow);
+    }
+
+    .book-card__subtitle {
+      color: var(--color-dark-blue-1);
+    }
+  }
+
+  &.wasted {
+    color: green;
+  }
+
+  &__title {
+    font-size: 22px;
+    line-height: 35px;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__author {
+    margin-top: 18px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 145%;
+  }
+
+  &__btn-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    padding: 5px 10px;
+
+    &:first-child {
+      margin-right: 13px;
+
+      @include tablet {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

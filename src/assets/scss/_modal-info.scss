@@ -1,0 +1,40 @@
+.modal-info {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 250px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-dark-blue-1);
+  border-radius: 5px;
+  opacity: 0;
+  transition: z-index 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  box-shadow: inset 0 0 35px red;
+
+  @include mobile {
+    width: 300px;
+    height: 150px;
+  }
+
+  &.is-active {
+    opacity: 1;
+    z-index: 10;
+    transition: z-index 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-dark-blue-1);
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+}

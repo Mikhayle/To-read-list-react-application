@@ -1,0 +1,79 @@
+.book-descr {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 37px 25px;
+  height: 100%;
+  background-color: var(--color-white);
+
+  @include mobile {
+    padding: 10px;
+
+    @media screen and (orientation: landscape) {
+      height: 100vh;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 145%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-yellow);
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 145%;
+    color: var(--color-dark-blue-1);
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__body {
+    margin-bottom: 50px;
+
+    @include mobile {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 145%;
+    color: var(--color-dark-blue-1);
+
+    & span {
+      display: block;
+      font-size: 20px;
+      font-weight: 300;
+      word-break: break-word;
+
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__btn-add {
+    align-self: center;
+    width: 185px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}

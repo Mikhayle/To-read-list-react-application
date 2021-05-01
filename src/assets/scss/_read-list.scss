@@ -1,0 +1,53 @@
+.read {
+  position: relative;
+  height: 100%;
+  background-color: var(--color-dark-blue-1);
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  box-sizing: border-box;
+
+  &__header {
+    padding: 12px 26px;
+    min-height: 10%;
+    border-bottom: 1px solid var(--color-white);
+    box-sizing: border-box;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 145%;
+
+    @include tablet {
+      font-size: 30px;
+    }
+  }
+
+  &__btn-close {
+    display: none;
+
+    @include mobile {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background: none;
+      border: none;
+    }
+  }
+
+  &__prop {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 35px;
+
+    &--common {
+      margin-right: 20px;
+    }
+
+    &__list {
+      box-sizing: border-box;
+    }
+  }
+
+}
